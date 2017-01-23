@@ -2220,7 +2220,7 @@ $(selector).datepick('setDate', [date1, date2, date3]) */
 					var selectable = (selectOtherMonths || drawDate.getMonth() + 1 === month) &&
 						this._isSelectable(elem, drawDate, dateInfo.selectable, minDate, maxDate);
 					days += this._prepare(renderer.day, inst).replace(/\{day\}/g,
-						(selectable ? '<a href="javascript:void(0)"' : '<span') +
+						(selectable ? '<a href="#" onclick="return false;"' : '<span') +
 						' class="dp' + ts + ' ' + (dateInfo.dateClass || '') +
 						(selected && (selectOtherMonths || drawDate.getMonth() + 1 === month) ?
 						' ' + renderer.selectedClass : '') +
