@@ -1,7 +1,7 @@
 ﻿/*! http://keith-wood.name/datepick.html
 	Date picker for jQuery v5.1.1.
 	Written by Keith Wood (wood.keith{at}optusnet.com.au) February 2010.
-	Licensed under the MIT (http://keith-wood.name/licence.html) licence. 
+	Licensed under the MIT (http://keith-wood.name/licence.html) licence.
 	Please attribute the author if you use it. */
 
 (function($) { // Hide scope, no $ conflict
@@ -2022,7 +2022,7 @@ $(selector).datepick('setDate', [date1, date2, date3]) */
 				else {
 					inst.selectedDates = [date];
 				}
-				inst.prevDate = inst.drawDate = plugin.newDate(date);
+				inst.prevDate = plugin.newDate(date);
 				this._updateInput(elem);
 				if (inst.inline || inst.pickingRange || inst.selectedDates.length <
 						(inst.options.multiSelect || (inst.options.rangeSelect ? 2 : 1))) {
@@ -2220,7 +2220,7 @@ $(selector).datepick('setDate', [date1, date2, date3]) */
 					var selectable = (selectOtherMonths || drawDate.getMonth() + 1 === month) &&
 						this._isSelectable(elem, drawDate, dateInfo.selectable, minDate, maxDate);
 					days += this._prepare(renderer.day, inst).replace(/\{day\}/g,
-						(selectable ? '<a href="javascript:void(0)"' : '<span') +
+						(selectable ? '<a href="#" onclick="return false;"' : '<span') +
 						' class="dp' + ts + ' ' + (dateInfo.dateClass || '') +
 						(selected && (selectOtherMonths || drawDate.getMonth() + 1 === month) ?
 						' ' + renderer.selectedClass : '') +
